@@ -1,49 +1,37 @@
-//Codigo del cuadrado
+//Funciones para cuadrado
 
-console.group("Cuadrados")
-const ladoCuadrado = 5;
+function perimetroCuadrado(lado){
+    return lado * 4 + " cm";
+}
 
-console.log("Los latos del cuadrado miden " + ladoCuadrado + " cm");
+function areaCuadrado(lado) {
+    return lado * lado + " cm2"
+}
 
-const perimetroCuadrado = ladoCuadrado * 4;
+//Funciones para triangulos
 
-console.log("El perimetro del cuadrado es: " + perimetroCuadrado + " cm");
+function perimetroTriangulo(lado1, lado2, base) {
+    return lado1 + lado2 + base;
+}
 
-const areaCuadrado = ladoCuadrado * ladoCuadrado;
+function areaTriangulo(base, altura) {
+  return (base * altura) / 2;
+}
 
-console.log("El area de mi cuadrado es: " + areaCuadrado + " cm2");
-console.groupEnd();
+//Funciones para circulo
 
+PI = Math.PI;
 
-console.group("Triangulos");
+function diametroCirculo(radio) {
+  return radio * 2;
+}
 
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
-const alturaTriangulo = 5.5;
+function perimetroCirculo(radio){
+    const diametro = diametroCirculo(radio);
+    console.log(diametro);
+    return diametro * PI ;
+}
 
-console.log(`Los lados del triangulo miden ${ladoTriangulo1} cm,${ladoTriangulo2} cm ${baseTriangulo} cm y la altura ${alturaTriangulo} cm`);
-
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-console.log(`El perimetro del triangulo es ${perimetroTriangulo}`);
-
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
-console.log(`El area del triangulo es: ${areaTriangulo} cm2`);
-console.groupEnd();
-
-//Circulo
-console.group("Circulos")
-
-const radioCirculo = 4;
-const diametroCirculo = radioCirculo * 2;
-const Pi = Math.PI;
-console.log(`${Pi}`)
-
-
-const perimetroCirculo = diametroCirculo * Pi;
-console.log(`El perimetro del circulo es ${perimetroCirculo} cm`);
-
-const areaCirculo = (radioCirculo * radioCirculo) * Pi;
-console.log(`El area del circulo es ${areaCirculo} cm2`)
-
-console.groupEnd();
+function areaCirculo(radio){
+  return (radio * radio) * PI;
+}
